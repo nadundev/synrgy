@@ -43,6 +43,7 @@ export default function SplashScreen({ isVisible, onComplete }: SplashScreenProp
           height={80}
           priority
           className="w-20 h-20"
+          style={{ width: '5rem', height: 'auto' }}
         />
       </motion.div>
     </motion.div>

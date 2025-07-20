@@ -18,31 +18,31 @@ const Hero: React.FC = () => {
     {
       src: "/brands/company-logo-1.svg",
       alt: "Company Logo 1",
-      width: 120,
-      height: 40,
+      width: 80,
+      height: 28,
     },
     {
       src: "/brands/company-logo-2.svg", 
       alt: "Company Logo 2",
-      width: 120,
-      height: 40,
+      width: 80,
+      height: 28,
     },
     {
       src: "/brands/company-logo-3.svg",
       alt: "Company Logo 3", 
-      width: 120,
-      height: 40,
+      width: 80,
+      height: 28,
     },
     {
       src: "/brands/company-logo-4.svg",
       alt: "Company Logo 4",
-      width: 120,
-      height: 40,
+      width: 80,
+      height: 28,
     },
   ];
 
   // Create enough repetitions for smooth infinite scrolling
-  const repeatedBrands = [...brands, ...brands, ...brands, ...brands, ...brands];
+  const repeatedBrands = [...brands, ...brands, ...brands, ...brands];
 
   return (
     <section className="relative h-screen w-full flex flex-col overflow-hidden bg-white">
@@ -110,13 +110,13 @@ const Hero: React.FC = () => {
               <motion.div 
                 className="flex items-center"
                 animate={{
-                  x: [0, -180 * brands.length], // Move by exactly one set of brands
+                  x: [0, -220 * brands.length], // Move exactly one set of 4 brands (880px)
                 }}
                 transition={{
                   x: {
                     repeat: Infinity,
                     repeatType: "loop",
-                    duration: 20,
+                    duration: 16,
                     ease: "linear",
                   },
                 }}
@@ -124,14 +124,16 @@ const Hero: React.FC = () => {
                 {repeatedBrands.map((brand, index) => (
                   <div
                     key={index}
-                    className="flex items-center justify-center min-w-[180px] px-6 whitespace-nowrap flex-shrink-0"
+                    className="flex items-center justify-center min-w-[220px] px-8 whitespace-nowrap flex-shrink-0"
                   >
                     <Image
                       src={brand.src}
                       alt={brand.alt}
                       width={brand.width}
                       height={brand.height}
+                      priority={index < 4}
                       className="object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
+                      style={{ width: 'auto', height: 'auto' }}
                     />
                   </div>
                 ))}

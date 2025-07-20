@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import SplashScreen from "./SplashScreen";
+import CookiesPopup from "./CookiesPopup";
 
 interface ClientWrapperProps {
   children: React.ReactNode;
@@ -33,6 +34,16 @@ export default function ClientWrapper({ children }: ClientWrapperProps) {
     };
   }, []);
 
+  const handleCookieAccept = () => {
+    // You can add Google Analytics or other tracking here
+    console.log('Cookies accepted - you can now enable tracking');
+  };
+
+  const handleCookieDecline = () => {
+    // Disable any tracking
+    console.log('Cookies declined - tracking disabled');
+  };
+
   return (
     <>
       <SplashScreen 
@@ -42,6 +53,10 @@ export default function ClientWrapper({ children }: ClientWrapperProps) {
       <div className={`transition-opacity duration-500 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
         {children}
       </div>
+      <CookiesPopup 
+        onAccept={handleCookieAccept}
+        onDecline={handleCookieDecline}
+      />
     </>
   );
 } 
