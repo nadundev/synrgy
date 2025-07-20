@@ -5,7 +5,7 @@ const Footer: React.FC = () => {
     <footer className="relative bg-white min-h-[400px] flex flex-col justify-end overflow-hidden">
       {/* Large Background Text */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <h2 className="text-[16rem] md:text-[24rem] lg:text-[32rem] font-bold select-none leading-none bg-gradient-to-b from-gray-400 via-gray-300 to-transparent bg-clip-text text-transparent"
+        <h2 className="text-[6rem] sm:text-[8rem] md:text-[12rem] lg:text-[16rem] xl:text-[20rem] 2xl:text-[24rem] font-bold select-none leading-none bg-gradient-to-b from-gray-400 via-gray-300 to-transparent bg-clip-text text-transparent"
             style={{
               maskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%)',
               WebkitMaskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%)'
