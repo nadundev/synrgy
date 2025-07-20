@@ -1,8 +1,9 @@
-<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="11.8749" y="24" width="12" height="12" fill="#81807F"/>
-<rect x="47.875" y="36.0001" width="12" height="12" transform="rotate(180 47.875 36.0001)" fill="#454545"/>
-<path d="M23.8749 24L35.875 12V24L23.8749 36V24Z" fill="#595857"/>
-<path d="M35.875 36L23.875 47.9999L23.875 36L35.875 24L35.875 36Z" fill="#7B7B7B"/>
-<path d="M11.8749 24L35.875 0V12L23.8749 24H11.8749Z" fill="#454545"/>
-<path d="M47.875 36L23.8749 60L23.8749 48L35.875 36L47.875 36Z" fill="#585858"/>
+<svg width="76" height="76" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="76" height="76" rx="38" fill="#D4D4D4"/>
+<rect x="19.8749" y="32" width="12" height="12" fill="#81807F"/>
+<rect x="55.875" y="44.0001" width="12" height="12" transform="rotate(180 55.875 44.0001)" fill="#454545"/>
+<path d="M31.8749 32L43.875 20V32L31.8749 44V32Z" fill="#595857"/>
+<path d="M43.875 44L31.875 55.9999L31.875 44L43.875 32L43.875 44Z" fill="#7B7B7B"/>
+<path d="M19.8749 32L43.875 8V20L31.8749 32H19.8749Z" fill="#454545"/>
+<path d="M55.875 44L31.8749 68L31.8749 56L43.875 44L55.875 44Z" fill="#585858"/>
 </svg>

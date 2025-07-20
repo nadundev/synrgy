@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ppNeueMontreal, inter } from "./ui/fonts";
 import "./globals.css";
+import ClientWrapper from "@/components/ui/ClientWrapper";
 
 export const metadata: Metadata = {
   title: "Synrgy - Design Agency",
@@ -17,7 +18,9 @@ export default function RootLayout({
       <body
         className={`${ppNeueMontreal.variable} ${inter.variable} font-sans antialiased`}
       >
-        {children}
+        <ClientWrapper>
+          {children}
+        </ClientWrapper>
       </body>
     </html>
   );

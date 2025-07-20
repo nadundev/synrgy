@@ -67,7 +67,7 @@ export default function FloatingNav() {
           className={`relative flex items-center justify-between transition-all duration-300 ease-out ${isExpanded ? "mb-6" : ""}`}
         >
           {/* Logo */}
-          <Image src="/synrgy-logo-small.svg" alt="Logo" width={48} height={100} className="h-8 w-auto"/>
+          <Image src="/synrgy-logo-small.svg" alt="Logo" width={48} height={100} className="h-12 w-auto"/>
 
           {/* Hamburger Menu - 2 lines - Centered */}
           <button
