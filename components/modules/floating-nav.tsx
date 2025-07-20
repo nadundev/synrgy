@@ -43,7 +43,7 @@ export default function FloatingNav() {
         className={`
           bg-white/10 backdrop-blur-2xl border border-white/20
           transition-all duration-300 ease-out
-          px-3 py-3 w-[480px]
+          px-2 py-2 w-[480px]
         `}
         style={{
           borderRadius: isExpanded ? "24px" : "50px",

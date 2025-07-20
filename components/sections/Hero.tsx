@@ -94,7 +94,7 @@ const Hero: React.FC = () => {
             {/* Left side text */}
             <div className="flex-shrink-0">
               <p className="text-base font-sans text-gray-600 font-medium mr-16">
-                Trusted by world&apos;s<br />most exciting brands
+                Trusted by<br />most exciting brands
               </p>
             </div>
             
