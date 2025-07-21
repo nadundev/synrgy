@@ -9,7 +9,7 @@ const CTA: React.FC = () => {
     <section className="py-24 px-6 bg-white">
       <div className="max-w-[1400px] mx-auto text-center">
         {/* Main heading with gradient */}
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium leading-tight mb-12">
+        <h2 className="text-4xl md:text-5xl lg:text-7xl font-medium leading-tight lg:leading-20 mb-12">
           <span className="bg-gradient-to-r from-gray-900 via-gray-600 to-gray-300 bg-clip-text text-transparent">
             Work seamlessly with a creative team<br />
             that&apos;s built to match your pace<br />

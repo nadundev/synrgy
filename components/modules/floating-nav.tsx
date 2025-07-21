@@ -37,13 +37,13 @@ export default function FloatingNav() {
   }, [isExpanded])
 
   return (
-    <div className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50">
+    <div className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 w-full px-4 sm:px-0 sm:w-auto">
       <div
         ref={menuRef}
         className={`
           bg-white/10 backdrop-blur-2xl border border-white/20
           transition-all duration-300 ease-out
-          px-2 py-2 w-[480px]
+          px-2 py-2 w-full max-w-[480px] sm:w-[480px]
         `}
         style={{
           borderRadius: isExpanded ? "24px" : "50px",

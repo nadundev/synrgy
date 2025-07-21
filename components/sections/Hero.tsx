@@ -22,12 +22,6 @@ const Hero: React.FC = () => {
       height: 28,
     },
     {
-      src: "/brands/company-logo-2.svg", 
-      alt: "Company Logo 2",
-      width: 80,
-      height: 28,
-    },
-    {
       src: "/brands/company-logo-3.svg",
       alt: "Company Logo 3", 
       width: 80,
@@ -36,6 +30,12 @@ const Hero: React.FC = () => {
     {
       src: "/brands/company-logo-4.svg",
       alt: "Company Logo 4",
+      width: 80,
+      height: 28,
+    },
+    {
+      src: "/brands/company-logo-5.svg",
+      alt: "Company Logo 5",
       width: 80,
       height: 28,
     },
@@ -61,8 +61,8 @@ const Hero: React.FC = () => {
         {/* Hero Content Overlay */}
         <div className="relative z-10 text-center px-4 max-w-5xl mx-auto mt-16">
           {/* Badge */}
-          <div className="inline-flex items-center bg-white/20 backdrop-blur-sm border border-white/30 rounded-full px-4 py-2 mb-6">
-            <span className="text-sm font-medium text-gray-800">
+          <div className="inline-flex items-center bg-gray-900/10 backdrop-blur-sm border border-gray-500/20 rounded-full px-4 py-2 mb-6">
+            <span className="text-sm font-medium text-gray-700">
               &quot;We make Sri Lankan websites look world-class.&quot; 🇱🇰
             </span>
           </div>
@@ -94,7 +94,7 @@ const Hero: React.FC = () => {
             {/* Left side text */}
             <div className="flex-shrink-0">
               <p className="text-base font-sans text-gray-600 font-medium mr-16">
-                Trusted by<br />most exciting brands
+                Trusted by best<br />most exciting brands
               </p>
             </div>
             
@@ -124,7 +124,7 @@ const Hero: React.FC = () => {
                 {repeatedBrands.map((brand, index) => (
                   <div
                     key={index}
-                    className="flex items-center justify-center min-w-[220px] px-8 whitespace-nowrap flex-shrink-0"
+                    className="flex items-center justify-center min-w-[220px] px-8 whitespace-nowrap flex-shrink-0 py-4"
                   >
                     <Image
                       src={brand.src}
@@ -132,8 +132,8 @@ const Hero: React.FC = () => {
                       width={brand.width}
                       height={brand.height}
                       priority={index < 4}
-                      className="object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
-                      style={{ width: 'auto', height: 'auto' }}
+                      className="object-contain opacity-60 hover:opacity-100 hover:scale-150 transition-all duration-300 filter grayscale hover:grayscale-0 h-[32px] w-auto"
+                      style={{ height: '32px', width: 'auto' }}
                     />
                   </div>
                 ))}
