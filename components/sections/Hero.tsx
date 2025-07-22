@@ -54,16 +54,16 @@ const Hero: React.FC = () => {
             color={[1, 1, 1]}
             mouseReact={false}
             amplitude={0.1}
-            speed={1.0}
+            speed={0.4}
           />
         </div>
 
         {/* Hero Content Overlay */}
         <div className="relative z-10 text-center px-4 max-w-5xl mx-auto mt-16">
           {/* Badge */}
-          <div className="inline-flex items-center bg-gray-900/10 backdrop-blur-sm border border-gray-500/20 rounded-full px-4 py-2 mb-6">
+          <div className="inline-flex items-center bg-gray-200/10 backdrop-blur-sm border border-gray-500/20 rounded-full px-4 py-2 mb-6">
             <span className="text-sm font-medium text-gray-700">
-              &quot;We make Sri Lankan websites look world-class.&quot; 🇱🇰
+              &quot;We make your website look world-class.&quot; 🇱🇰
             </span>
           </div>
           

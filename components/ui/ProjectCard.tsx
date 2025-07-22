@@ -14,6 +14,7 @@ interface ProjectCardProps {
   bottomRightSubText?: string;
   hoverTitle?: string;
   hoverDescription?: string;
+  mobileTitle?: string;
   className?: string;
 }
 
@@ -21,13 +22,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   title = "Ditto Brand Design",
   description = "2024 DITTO BRAND",
   image = "/project-placeholder.jpg",
-  brandName = "Ditto",
-  topLabel = "CRAFTED",
-  bottomLeftText = "2024 DITTO BRAND",
-  bottomRightText = "BRAND GUIDELINES",
-  bottomRightSubText = "LOGO & WEBSITE DESIGN",
+  brandName = "",
+  topLabel = "",
+  bottomLeftText = "",
+  bottomRightText = "",
+  bottomRightSubText = "",
   hoverTitle = "View Project",
-  hoverDescription = "Explore the complete brand identity and web design process",
+  hoverDescription = "",
+  mobileTitle = "",
   className = "",
 }) => {
   return (
@@ -71,11 +73,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           </div>
         </div>
 
-        {/* Hover Overlay - Slides in from bottom */}
-        <div className="absolute inset-0 z-20 overflow-hidden">
-          <div className="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t from-black/60 via-black/40 to-transparent backdrop-blur-sm transform translate3d(0, 100%, 0) group-hover:translate3d(0, 0, 0) transition-all duration-700 ease-[cubic-bezier(0.25, 0.46, 0.45, 0.94)] will-change-transform">
+        {/* Hover Overlay - Slides in from bottom - Desktop only */}
+        <div className="absolute inset-0 z-20 overflow-hidden hidden lg:block">
+          <div className="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t from-black/30 via-black/10 to-transparent transform translate3d(0, 100%, 0) group-hover:translate3d(0, 0, 0) transition-all duration-700 ease-[cubic-bezier(0.25, 0.46, 0.45, 0.94)] will-change-transform">
             <div className="absolute bottom-0 left-0 right-0 p-8 text-white transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-200 ease-out">
-              <h3 className="text-2xl font-medium mb-3">{hoverTitle}</h3>
+              <div className="inline-flex items-center bg-black/40 border border-white/30 rounded-full px-6 py-3 shadow-lg">
+                <h3 className="text-xl font-medium">{hoverTitle}</h3>
+              </div>
             </div>
           </div>
         </div>
@@ -86,6 +90,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
       {/* Card Shadow */}
       <div className="absolute inset-0 bg-black/10 rounded-2xl blur-xl transform translate-y-4 -z-10" />
+
+      {/* Mobile Title - Only visible on mobile */}
+      {mobileTitle && (
+        <div className="mt-4 lg:hidden">
+          <h3 className="text-lg font-medium text-gray-900">{mobileTitle}</h3>
+        </div>
+      )}
     </div>
   );
 };

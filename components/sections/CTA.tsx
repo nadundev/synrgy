@@ -3,22 +3,35 @@
 import React from 'react';
 import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const CTA: React.FC = () => {
   return (
     <section className="py-24 px-6 bg-white">
       <div className="max-w-[1400px] mx-auto text-center">
         {/* Main heading with gradient */}
-        <h2 className="text-4xl md:text-5xl lg:text-7xl font-medium leading-tight lg:leading-20 mb-12">
+        <motion.h2 
+          className="text-4xl md:text-5xl lg:text-7xl font-medium leading-tight lg:leading-20 mb-12"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-100px" }}
+        >
           <span className="bg-gradient-to-r from-gray-900 via-gray-600 to-gray-300 bg-clip-text text-transparent">
             Work seamlessly with a creative team<br />
             that&apos;s built to match your pace<br />
             and exceed your expectations.
           </span>
-        </h2>
+        </motion.h2>
 
         {/* CTA Button */}
-        <div className="flex justify-center">
+        <motion.div 
+          className="flex justify-center"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-100px" }}
+        >
           <button 
             className="group flex items-center gap-4 bg-black hover:bg-gray-900 text-white rounded-full py-4 px-6 text-sm font-medium transition-all duration-200"
             style={{
@@ -47,7 +60,7 @@ const CTA: React.FC = () => {
               <span className="text-sm text-gray-400">Let&apos;s talk about your project</span>
             </div>
           </button>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
